@@ -3,8 +3,8 @@
 <head>
     <title></title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -52,7 +52,31 @@
             padding: 20px 0;
             font-size: 30px;
         }
-        
+        .flex-container {
+            border-top: 10px solid transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .triangle-left {
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-right: 50px solid #555;
+            border-bottom: 25px solid transparent;
+            flex-grow: 1; 
+            text-align: center;
+        }
+        .triangle-right {
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-left: 50px solid #555;
+            border-bottom: 25px solid transparent;
+            flex-grow: 1; 
+            text-align: center;
+        }
+
         /******************************* Page Title Start Here *******************************/
         
         body{
@@ -66,8 +90,21 @@
     </head>
     
     <body>
-
-        
+        <div>
+            <div class="row">
+                <div style="flex-grow: 1; text-align: left; font-size: 5em;"><i class="fas fa-caret-left"></i></div>
+                <div style="flex-grow: 5; margin-top: 1.45em; max-height: 2em; text-align: center; font-size: 25px; padding-left: 10px; pointer-events: none" class= "btn btn-primary">First Name</div>
+                <div style="flex-grow: 5; margin-top: 1.45em; max-height: 2em; text-align: center; font-size: 25px; padding-left: 10px; pointer-events: none" class="btn btn-primary">Last Name</div>
+                <div style="flex-grow: 1; text-align: right; font-size: 5em;"><i class="fas fa-caret-right"></i></div>
+            </div>
+        </div>
+        <div class="flex-container" style="flex-direction: column;">
+            <div style="flex-grow: 2;"></div>
+            <div style="flex-grow: 9; text-align: center; pointer-events: none" class= "btn btn-secondary">Email Address</div>
+            <div style="flex-grow: 9; text-align: center; pointer-events: none" class= "btn btn-secondary">Registration Number</div>
+            <div style="flex-grow: 9; text-align: center; pointer-events: none" class= "btn btn-secondary">Age Group</div>
+            <div style="flex-grow: 2;"></div>
+        </div>
     </body>
 </html>
 
