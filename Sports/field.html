@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+        
+        /******************************* Page GRID LAYOUT FORMATE CSS *******************************/
+        
+        .item1 { 
+            grid-area: header; 
+        }
+        
+        .item2 { 
+            grid-area: menu; 
+        }
+        
+        .item3 { 
+            grid-area: main; 
+        }
+        
+        .item4 { 
+            grid-area: right; 
+        }
+        
+        .item5 { 
+            grid-area: footer; 
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+            'header header header header header header'
+            'menu main main main right right'
+            'menu footer footer footer footer footer';
+            grid-gap: 10px;
+            padding: 10px;
+        }
+        
+        .grid-container > div {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+        .col {
+            border: 5px;
+            border-color: black
+            
+        }
+
+        .nopadding {
+        padding: 1px !important;
+        margin: 0 !important;
+        }
+
+        /******************************* Page Title Start Here *******************************/
+        
+        body{
+            background-color: rgb(255, 255, 255);
+        }
+        
+        
+        
+        
+    </style>
+    
+    </head>
+    
+    <body>
+        <div>
+            <div class="row">
+                    <div class="col nopadding"></div>
+                    <div class="col nopadding">
+                        <div style="width: Large; text-align: center; font-size: 25px; pointer-events: none" class="btn btn-primary btn-block">First</div>
+                    </div>
+                    <div class="col nopadding">
+                        <div style=" text-align: center; font-size: 25px; pointer-events: none" class="btn btn-primary btn-block">Last</div>
+                    </div>
+                    <div class="col nopadding">
+                        <div style=" text-align: center; font-size: 25px; pointer-events: none" class="btn btn-primary btn-block">Sport</div>
+                    </div>
+                    <div class="col nopadding">
+                        <div style=" text-align: center; font-size: 25px; pointer-events: none" class="btn btn-primary btn-block">Age</div>
+                    </div>
+                    <div class="col nopadding">
+                        <div style=" text-align: center; font-size: 25px; pointer-events: none" class="btn btn-primary btn-block">Gender</div>
+                    </div>
+                    <div class="col nopadding">
+                        <div style=" text-align: center; font-size: 25px; pointer-events: none" class="btn btn-primary btn-block">City</div>
+                    </div>
+                    <div class="col nopadding"></div>
+                </div>
+                <div class="row">
+                    <div class="col nopadding"></div>
+                    <div class="col nopadding">
+                        <div style=" text-align: center; font-size: 25px; pointer-events: none" class="btn btn-info btn-block">fname</div>
+                    </div>
+                    <div class="col nopadding">
+                        <div style=" text-align: center; font-size: 25px; pointer-events: none" class="btn btn-info btn-block">lname</div>
+                    </div>
+                    <div class="col nopadding">
+                        <div style=" text-align: center; font-size: 25px; pointer-events: none" class="btn btn-info btn-block">track</div>
+                    </div>
+                    <div class="col nopadding">
+                        <div style=" text-align: center; font-size: 25px; pointer-events: none" class="btn btn-info btn-block">99</div>
+                    </div>
+                    <div class="col nopadding">
+                        <div style=" text-align: center; font-size: 25px; pointer-events: none" class="btn btn-info btn-block">M</div>
+                    </div>
+                    <div class="col nopadding">
+                        <div style=" text-align: center; font-size: 25px; pointer-events: none" class="btn btn-info btn-block">London</div>
+                    </div>
+                    <div class="col nopadding"><p id="test"></p></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script>
