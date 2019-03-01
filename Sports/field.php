@@ -1,6 +1,6 @@
 <?php
 
-$file = fopen("data.csv", 'r') or die("Unable to open file!"); // Opens the file, or returns error
+$file = fopen("../data.csv", 'r') or die("Unable to open file!"); // Opens the file, or returns error
 
 
 $out=<<<EOD
