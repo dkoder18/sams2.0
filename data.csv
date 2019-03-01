@@ -1,7 +1,4 @@
-Type,First Name,Last Name,Address Line 1,Address Line 2,City,State,Zip Code,Country,Email,Cellphone,Date of Birth,Age,Gender,Tshirt Size,DSO,Registration Number,Bib Number,Membership Number,IPC Number,Team Name,Head Coach's Name,Coach's Phone,Coach's Email,Classified?,Coach Coming?,Archery,Fencing,Field,Swim,Table Tennis,Teams,Track,Weighlifting,Other
-,Name123,Name456,123 Main Street,,New York,NM,10000,,first@last.com,,0002-02-05,105,male,cMedium,,,,,,,,,,,,,,,1,,,,,
-,John,Smith,"1 First Ave","Apartment 23",Chicago,IL,00001,,last@first.co.uk,,0001-02-02,2,other,medium,ba,128396,213465,27345,NJIT,Professor,911,name@njit.edu,0,1,,1,,1,,1,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1111,radiolabel,fname,lname,address1,address2,city,state,zip,country,email,phone,dob,age,gender,tsize,dso,regNumber,bibNumber,memNumber,ipcNumber,teamName,hcName,hcPhone,hcEmail,classified,coacPresence,archery,fencing,field,swim,tableTennis,teams,track,weightlifting,other
+1112,Official,Name123,Name456,123 Main Street,fgesr,New York,NM,10000,USA,first@last.com,9876543210,0005-05-05,5,male,xl,id,128396,213465,564084,27345,NJIT,Professor,4465213065,firstname@last.co,0,1,1,,,1,,,1,,
+1113,,Name123,Name456,123 Main Street,fgesr,New York,NM,10000,USA,first@last.com,9876543210,2/2/2017,3,male,cSmall,,,,,,,,,,,,,0,0,0,0,0,0,0,0
+1114,,qwe,asd,blahdsf,ljds,newark,SC,34567,USA,email@email.com,1234567890,0092-09-03,23,male,cSmall,,,,,,,,,,,,0,0,0,0,0,0,1,0,0

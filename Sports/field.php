@@ -35,7 +35,11 @@ while (($data = fgetcsv($file)) !== FALSE) {
     $age="";
     $gender="";
     $city="";
+    $id="";
     for($i=0; $i<count($data); $i++){
+        if($i==0){
+            $id=$data[$i];
+        }
         if($headers[$i]=="fname"){
             $fname= $data[$i];
         }
@@ -67,7 +71,7 @@ while (($data = fgetcsv($file)) !== FALSE) {
     <td><p class="text-center">$age</p></td>
     <td><p class="text-center">$gender</p></td>
     <td><p class="text-center">$city</p></td>
-    <td><p class="text-center"><button type="button" class="btn btn-success">Info</button></p></td>
+    <td><p class="text-center"><a class="btn btn-info" href="https://web.njit.edu/~jsp74/sams2.0/masterpage/athleteRecords.php?id=$id" role="button">Info</a></p></td>
   </tr>
 EOD;
 
