@@ -273,14 +273,15 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sports <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a id = "archery" href="#">Archery</a></li>
-                            <li><a id = "fencing" href="#">Fencing</a></li>
-                            <li><a id = "field" href="#">Field</a></li>
-                            <li><a id = "swimming" href="#">Swimming</a></li>
-                            <li><a id = "tabletennis" href="#">Table Tennis</a></li>
-                            <li><a id = "teamsports" href="#">Team Sports</a></li>
-                            <li><a id = "track" href="#">Track</a></li>
-                            <li><a id = "other" href="#">Other Sports</a></li>
+                            <li><a id = "archery" href="../sports/sportsTable.php?sport=archery">Archery</a></li>
+                            <li><a id = "fencing" href="../sports/sportsTable.php?sport=fencing">Fencing</a></li>
+                            <li><a id = "field" href="../sports/sportsTable.php?sport=field">Field</a></li>
+                            <li><a id = "swimming" href="../sports/sportsTable.php?sport=swim">Swimming</a></li>
+                            <li><a id = "tabletennis" href="../sports/sportsTable.php?sport=tableTennis">Table Tennis</a></li>
+                            <li><a id = "teamsports" href="../sports/sportsTable.php?sport=teams">Team Sports</a></li>
+                            <li><a id = "track" href="../sports/sportsTable.php?sport=track">Track</a></li>
+                            <li><a id = "weightlifting" href="../sports/sportsTable.php?sport=weightlifting">Weightlifting</a></li>
+                            <li><a id = "other" href="../sports/sportsTable.php?sport=other">Other Sports</a></li>
                         </ul>
                     </li>
                     
