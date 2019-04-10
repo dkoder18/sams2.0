@@ -189,7 +189,7 @@
           </nav> -->
 
           <div class = "jumbotron">
-               <strong class="text-center"><h1>Field Event Preferences</h1></strong>
+               <strong class="text-center"><h1>Fencing Event Preferences</h1></strong>
           </div>
 
           <nav class="navbar navbar-inverse">
@@ -319,15 +319,13 @@
                                         <tr>
                                              <th class="text-center">Event #</th>
                                              <th class="text-center">Event Name</th>
-                                             <th class="text-center">Type of event</th>
                                              <th class="text-center">Team scoring</th>
                                              <th class="text-center">Event Date</th>
                                              <th class="text-center">Remove</th>
                                         </tr>
                                         <tr>
                                              <td id="event1" class="pt-3-half" contenteditable="true">Event 1</td>
-                                             <td id="event1name" class="pt-3-half" contenteditable="true">ShotPut</td>
-                                             <td id="event1type" class="pt-3-half" contenteditable="true">horizontal</td>
+                                             <td id="event1name" class="pt-3-half" contenteditable="true">Foil</td>
                                              <td id="event1scoring" class="pt-3-half" contenteditable="true">yes</td>
                                              <td id="event1date" class="pt-3-half" contenteditable="true">26-JUL-18</td>
                                              <td>
@@ -336,8 +334,7 @@
                                         </tr>
                                         <tr>
                                              <td id="event2" class="pt-3-half" contenteditable="true">Event 2</td>
-                                             <td id="event2name" class="pt-3-half" contenteditable="true">Discus</td>
-                                             <td id="event2type" class="pt-3-half" contenteditable="true">horizontal</td>
+                                             <td id="event2name" class="pt-3-half" contenteditable="true">Epee</td>
                                              <td id="event2scoring" class="pt-3-half" contenteditable="true">yes</td>
                                              <td id="event2date" class="pt-3-half" contenteditable="true">26-JUL-18</td>
                                              <td>
@@ -346,100 +343,9 @@
                                         </tr>
                                         <tr>
                                              <td id="event3" class="pt-3-half" contenteditable="true">Event 3</td>
-                                             <td id="event3name" class="pt-3-half" contenteditable="true">Javelin</td>
-                                             <td id="event3type" class="pt-3-half" contenteditable="true">horizontal</td>
+                                             <td id="event3name" class="pt-3-half" contenteditable="true">Saber</td>
                                              <td id="event3scoring" class="pt-3-half" contenteditable="true">yes</td>
                                              <td id="event3date" class="pt-3-half" contenteditable="true">26-JUL-18</td>
-                                             <td>
-                                                  <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                                             </td>
-                                        </tr>
-                                        <tr>
-                                             <td id="event4" class="pt-3-half" contenteditable="true">Event 4</td>
-                                             <td id="event4name" class="pt-3-half" contenteditable="true">Club</td>
-                                             <td id="event4type" class="pt-3-half" contenteditable="true">horizontal</td>
-                                             <td id="event4scoring" class="pt-3-half" contenteditable="true">yes</td>
-                                             <td id="event4date" class="pt-3-half" contenteditable="true">26-JUL-18</td>
-                                             <td>
-                                                  <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                                             </td>
-                                        </tr>
-                                        <tr>
-                                             <td id="event5" class="pt-3-half" contenteditable="true">Event 5</td>
-                                             <td id="event5name" class="pt-3-half" contenteditable="true">Softball</td>
-                                             <td id="event5type" class="pt-3-half" contenteditable="true">horizontal</td>
-                                             <td id="event5scoring" class="pt-3-half" contenteditable="true">yes</td>
-                                             <td id="event5date" class="pt-3-half" contenteditable="true">26-JUL-18</td>
-                                             <td>
-                                                  <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                                             </td>
-                                        </tr>
-                                        <tr>
-                                             <td id="event6" class="pt-3-half" contenteditable="true">Event 6</td>
-                                             <td id="event6name" class="pt-3-half" contenteditable="true">Long Jump</td>
-                                             <td id="event6type" class="pt-3-half" contenteditable="true">horizontal</td>
-                                             <td id="event6scoring" class="pt-3-half" contenteditable="true">yes</td>
-                                             <td id="event6date" class="pt-3-half" contenteditable="true">26-JUL-18</td>
-                                             <td>
-                                                  <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                                             </td>
-                                        </tr>
-                                        <tr>
-                                             <td id="event7" class="pt-3-half" contenteditable="true">Event 7</td>
-                                             <td id="event7name" class="pt-3-half" contenteditable="true">High Jump</td>
-                                             <td id="event7type" class="pt-3-half" contenteditable="true">vertical</td>
-                                             <td id="event7scoring" class="pt-3-half" contenteditable="true">yes</td>
-                                             <td id="event7date" class="pt-3-half" contenteditable="true">26-JUL-18</td>
-                                             <td>
-                                                  <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                                             </td>
-                                        </tr>
-                                        <tr>
-                                             <td id="event8" class="pt-3-half" contenteditable="true">Event 8</td>
-                                             <td id="event8name" class="pt-3-half" contenteditable="true">Triple jump</td>
-                                             <td id="event8type" class="pt-3-half" contenteditable="true">horizontal</td>
-                                             <td id="event8scoring" class="pt-3-half" contenteditable="true">yes</td>
-                                             <td id="event8date" class="pt-3-half" contenteditable="true">26-JUL-18</td>
-                                             <td>
-                                                  <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                                             </td>
-                                        </tr>
-                                        <tr>
-                                             <td id="event9" class="pt-3-half" contenteditable="true">Event 9</td>
-                                             <td id="event9name" class="pt-3-half" contenteditable="true">Precision</td>
-                                             <td id="event9type" class="pt-3-half" contenteditable="true">horizontal</td>
-                                             <td id="event9scoring" class="pt-3-half" contenteditable="true">yes</td>
-                                             <td id="event9date" class="pt-3-half" contenteditable="true">26-JUL-18</td>
-                                             <td>
-                                                  <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                                             </td>
-                                        </tr>
-                                        <tr>
-                                             <td id="event10" class="pt-3-half" contenteditable="true">Event 10</td>
-                                             <td id="event10name" class="pt-3-half" contenteditable="true">High Toss</td>
-                                             <td id="event10type" class="pt-3-half" contenteditable="true">vertical</td>
-                                             <td id="event10scoring" class="pt-3-half" contenteditable="true">yes</td>
-                                             <td id="event10date" class="pt-3-half" contenteditable="true">26-JUL-18</td>
-                                             <td>
-                                                  <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                                             </td>
-                                        </tr>
-                                        <tr>
-                                             <td id="event11" class="pt-3-half" contenteditable="true">Event 11</td>
-                                             <td id="event11name" class="pt-3-half" contenteditable="true">Medicine Ball Thrust</td>
-                                             <td id="event11type" class="pt-3-half" contenteditable="true">horizontal</td>
-                                             <td id="event11scoring" class="pt-3-half" contenteditable="true">yes</td>
-                                             <td id="event11date" class="pt-3-half" contenteditable="true">26-JUL-18</td>
-                                             <td>
-                                                  <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                                             </td>
-                                        </tr>
-                                        <tr>
-                                             <td id="event12" class="pt-3-half" contenteditable="true">Event 12</td>
-                                             <td id="event12name" class="pt-3-half" contenteditable="true">Distance Kick</td>
-                                             <td id="event12type" class="pt-3-half" contenteditable="true">horizontal</td>
-                                             <td id="event12scoring" class="pt-3-half" contenteditable="true">yes</td>
-                                             <td id="event12date" class="pt-3-half" contenteditable="true">26-JUL-18</td>
                                              <td>
                                                   <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
                                              </td>
