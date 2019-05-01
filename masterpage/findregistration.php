@@ -51,6 +51,16 @@ gatekeeper("./../login/login.php");
                #mySidenav button:hover {
                     left: 0;
                }
+               #myInput {
+                  background-image: url('/css/searchicon.png');
+                  background-position: 10px 10px;
+                  background-repeat: no-repeat;
+                  width: 100%;
+                  font-size: 16px;
+                  padding: 12px 20px 12px 40px;
+                  border: 1px solid #ddd;
+                  margin-bottom: 12px;
+                }
 
                
                .navbar{
@@ -143,7 +153,7 @@ gatekeeper("./../login/login.php");
                     }
                     
                     
-                    #myTable {
+                    #table {
                       border-collapse: collapse;
                       width: 100%;
                       border: 1px solid #ddd;
@@ -308,14 +318,104 @@ gatekeeper("./../login/login.php");
                <div class="col-sm-* well">
                     <h3>Search Registration</h3><hr>
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a Registration" title="Type in a Registration">
-                    <table id="myTable">
-                    <tr class="header">
-                              <th>Name</th>
-                              <th>Age</th>
-                              <th>Bib</th>
-                              <th>State</th>
+                    
+                      <?php
+                        //include( "./../login/functions.php" );
+                        session_start();     
+                        //gatekeeper("./../login/login.php");
+                        
+                        $file = fopen("./data.csv", 'r') or die("Unable to open file!"); // Opens the file, or returns error
+                        
+                        $out = <<<EOD
+                        <table class="table" id="searchTable">
+                        <thead>
+                            <tr>
+                              <th scope="col"><p class="text-center">Name</p></th>
+                              <th scope="col"><p class="text-center">Age</p></th>
+                              <th scope="col"><p class="text-center">Bib</p></th>
+                              <th scope="col"><p class="text-center">Gender</p></th>
+                              <th scope="col"><p class="text-center">State</p></th>
+                              <th scope="col"><p class="text-center">More Info</p></th>
                             </tr>
-                    </table>   
+                          </thead>
+                          <tbody>
+EOD;
+                        
+                        $headers = [];
+                        $data = fgetcsv($file);
+                        for ($i = 0;$i < count($data);$i++) {
+                            array_push($headers, $data[$i]);
+                        }
+                        
+                        while (($data = fgetcsv($file)) !== FALSE) {
+                        
+                            $inSport=true;
+                            $fname = "";
+                            $lname = "";
+                            $age = "";
+                            $gender = "";
+                            $state = "";
+                            $bib = "";
+                            $id = "";
+                            
+                            for ($i = 0;$i < count($data);$i++) {
+                                if ($i == 0) {
+                                    $id = $data[$i];
+                                }
+                                if ($headers[$i] == "fname") {
+                                    $fname = $data[$i];
+                                }
+                                if ($headers[$i] == "lname") {
+                                    $lname = $data[$i];
+                                }
+                                if ($headers[$i] == "state") {
+                                    $state = $data[$i];
+                                }
+                                if ($headers[$i] == "age") {
+                                    $age = $data[$i];
+                                }
+                                if ($headers[$i] == "gender") {
+                                    $gender = $data[$i];
+                                }
+                                if ($headers[$i] == "bibNumber") {
+                                    $bib = $data[$i];
+                                }
+                            }
+                            
+                            $row = <<<EOD
+                            <tr>
+                                 <td><p class="text-center">$fname $lname</p></td>
+                                 <td><p class="text-center">$age</p></td>
+                                 <td><p class="text-center">$bib</p></td>
+                                 <td><p class="text-center">$gender</p></td>
+                                 <td><p class="text-center">$state</p></td>
+                                 <td><p class="text-center"><a class="btn btn-info" href="./athleteRecords.php?id=$id" role="button">Info</a></p></td>
+                            </tr>
+EOD;
+                            $out.= $row;    
+                        }
+                  
+                        /*TEST
+                        $row = <<<EOD
+                            <tr>
+                                 <td><p class="text-center">"test name"</p></td>
+                                 <td><p class="text-center">"test age"</p></td>
+                                 <td><p class="text-center">"test gender"</p></td>
+                                 <td><p class="text-center">"test state"</p></td>
+                                 <td><p class="text-center"><a class="btn btn-info" href="./athleteRecords.php?id=$id" role="button">Info</a></p></td>
+                            </tr>
+EOD;
+                            $out.= $row;*/
+                            
+                        $out.= <<<EOD
+                            </tbody>
+                        </table>
+EOD;
+                        echo $out;
+                      ?>
+                      
+
+                    
                </div>
           </div>
 
@@ -640,87 +740,31 @@ gatekeeper("./../login/login.php");
                <br><br>
           </div>
      </body>
-             
-             <?php
-                        include( "./../login/functions.php" );
-                        session_start();     
-                        gatekeeper("./../login/login.php");
-                        
-                        $file = fopen("./data.csv", 'r') or die("Unable to open file!"); // Opens the file, or returns error
-                        /*
-                        $out = <<<EOD
-                        <table class="table">
-                          <thead>
-                            <tr>
-                              <th scope="col"><p class="text-center">First Name</p></th>
-                              <th scope="col"><p class="text-center">Last Name</p></th>
-                              <th scope="col"><p class="text-center">Sport</p></th>
-                              <th scope="col"><p class="text-center">Age</p></th>
-                              <th scope="col"><p class="text-center">Gender</p></th>
-                              <th scope="col"><p class="text-center">City</p></th>
-                              <th scope="col"><p class="text-center">More Info</p></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                        EOD;*/
-                        $headers = [];
-                        $data = fgetcsv($file);
-                        for ($i = 0;$i < count($data);$i++) {//////////////////
-                            array_push($headers, $data[$i]);
-                        }
-                        
-                        while (($data = fgetcsv($file)) !== FALSE) {
-                        
-                            $inSport=true;
-                            $fname = "";
-                            $lname = "";
-                            $age = "";
-                            $gender = "";
-                            $state = "";
-                            $id = "";
-                            
-                            for ($i = 0;$i < count($data);$i++) {
-                                if ($i == 0) {
-                                    $id = $data[$i];
-                                }
-                                if ($headers[$i] == "fname") {
-                                    $fname = $data[$i];
-                                }
-                                if ($headers[$i] == "lname") {
-                                    $lname = $data[$i];
-                                }
-                                if ($headers[$i] == "age") {
-                                    $age = $data[$i];
-                                }
-                                if ($headers[$i] == "gender") {
-                                    $gender = $data[$i];
-                                }
-                                if ($headers[$i] == "state") {
-                                    $state = $data[$i];
-                                }
-                            }
-                            if($inSport){
-                                /*$row = <<<EOD
-                                <tr>
-                                <td><p class="text-center">$fname." ".$lname</p></td>
-                                <td><p class="text-center">$age</p></td>
-                                <td><p class="text-center">$gender</p></td>
-                                <td><p class="text-center">$state</p></td>
-                                <td><p class="text-center"><a class="btn btn-info" href="./athleteRecords.php?id=$id" role="button">Info</a></p></td>
-                              </tr>
-                        EOD;
-                                $out.= $row;*/
-                            }
-                        }
-                        
-                        /*$out.= <<<EOD
-                            </tbody>
-                        </table>
-                        EOD;*/
-                      ?>
-             
                  
      <script>
+       function myFunction()
+       {
+         input = document.getElementById("myInput").value.toUpperCase();
+         table = document.getElementById("searchTable");
+         tr = table.getElementsByTagName("tr");
+         for (i = 0; i < tr.length; i++) 
+         {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) 
+            {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(input) > -1) 
+              {
+                tr[i].style.display = "";
+              } 
+              else  
+              {
+                tr[i].style.display = "none";
+              }
+            }
+         }
+       }
+     
           function handleImport(){
                var file = document.getElementById("registrationFile").value;
                console.log(file);
